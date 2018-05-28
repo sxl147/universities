@@ -1,0 +1,4 @@
+--check-column
+student_course_id
+--last-value
+335

@@ -1,0 +1,4 @@
+--check-column
+student_major_id
+--last-value
+110

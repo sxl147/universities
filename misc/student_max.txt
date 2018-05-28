@@ -1,0 +1,4 @@
+--check-column
+student_id
+--last-value
+111
