@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 1, 2017 2:43:04 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="ORMclasses.university.CountryORM" table="COUNTRY">
+        <id name="Id" type="long" access="field">
+            <column name="COUNTRY_ID" />
+            <generator class="increment" />
+        </id>
+        <property name="countryCode">
+	   		<column name="COUNTRY_CODE"/>
+	  	</property>
+	  	<property name="countryName">
+	   		<column name="COUNTRY_NAME"/>
+	  	</property>
+        <property name="evntTmeStmp">
+	   		<column name="EVNT_TMESTMP"/>
+	  	</property>
+	  	<property name="evntOperId">
+	   		<column name="EVNT_OPER_ID"/>
+	  	</property>
+    </class>
+</hibernate-mapping>

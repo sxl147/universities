@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 20, 2017 1:49:46 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="ORMclasses.university.CourseGradingORM" table="COURSE_GRADING">
+        <id name="Id" type="long">
+            <column name="COURSE_GRADING_ID" />
+            <generator class="increment" />
+        </id>
+        <property name="courseId">
+            <column name="COURSE_ID" />
+        </property>
+        <property name="gradeTypeId">
+            <column name="GRADE_TYPE_ID" />
+        </property>
+        <property name="pointValue">
+            <column name="POINT_VALUE" />
+        </property>
+        <property name="evntTmeStmp">
+            <column name="EVNT_TMESTMP" />
+        </property>
+        <property name="evntOperId">
+            <column name="EVNT_OPER_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

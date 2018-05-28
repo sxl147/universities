@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 21, 2017 10:57:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="ORMclasses.university.AddressORM" table="ADDRESS">
+        <id name="Id" type="long">
+            <column name="ADDRESS_ID" />
+            <generator class="increment" />
+        </id>
+        <property name="addressTypeId">
+            <column name="ADDRESS_TYPE_ID" />
+        </property>
+        <property name="connectorId">
+            <column name="CONNECTOR_ID" />
+        </property>
+        <property name="fullStreetName">
+            <column name="FULL_STREET_NAME" />
+        </property>
+        <property name="cityId">
+            <column name="CITY_ID" />
+        </property>
+        <property name="stateId">
+            <column name="STATE_ID" />
+        </property>
+        <property name="zipCode">
+            <column name="ZIP_CODE" />
+        </property>
+        <property name="evntTmeStmp">
+            <column name="EVNT_TMESTMP" />
+        </property>
+        <property name="evntOperId">
+            <column name="EVNT_OPER_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

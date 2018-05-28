@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 21, 2017 11:03:12 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="ORMclasses.university.AddressTypeORM" table="ADDRESS_TYPE">
+        <id name="Id" type="long">
+            <column name="ADDRESS_TYPE_ID" />
+            <generator class="increment" />
+        </id>
+        <property name="addressTypeCode">
+            <column name="ADDRESS_TYPE_CODE" />
+        </property>
+        <property name="addressTypeSubcode">
+            <column name="ADDRESS_TYPE_SUBCODE" />
+        </property>
+        <property name="addressTypeName">
+            <column name="ADDRESS_TYPE_NAME" />
+        </property>
+        <property name="evntTmeStmp">
+            <column name="EVNT_TMESTMP" />
+        </property>
+        <property name="evntOperId">
+            <column name="EVNT_OPER_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

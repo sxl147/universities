@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 26, 2017 6:05:31 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="ORMclasses.university.MajorORM" table="MAJORS">
+        <id name="Id" type="long">
+            <column name="MAJOR_ID" />
+            <generator class="increment" />
+        </id>
+        <property name="departmentId">
+            <column name="DEPARTMENT_ID" />
+        </property>
+        <property name="majorCode">
+            <column name="MAJOR_CODE" />
+        </property>
+        <property name="majorDescription">
+            <column name="MAJOR_DESCRIPTION" />
+        </property>
+        <property name="minorFlag">
+            <column name="MINOR_FLAG" />
+        </property>
+        <property name="evntTmeStmp">
+            <column name="EVNT_TMESTMP" />
+        </property>
+        <property name="evntOperId">
+            <column name="EVNT_OPER_ID" />
+        </property>
+    </class>
+</hibernate-mapping>
