@@ -1,1 +1,0 @@
-hive -f /home/cloudera/hive/scripts/flumeLogger1table.hql
