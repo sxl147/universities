@@ -263,43 +263,43 @@ public class StateORMfactory
           return stateObj;  
     }
 	
-//	public static StateORM retrieveUsStateByCode(String stateCode)
-//    {
-//          SessionFactory sessionFactory = null;
-//          Session session = null;
-//          Criteria criteria = null;
-//          Transaction tx = null;
-//          List results = null;
-//          CountryORM unitedStatesObj = null;
-//          StateORM stateObj = null;
-//          try
-//	      {
-//	          sessionFactory = getSessionFactory();
-//	          session =  sessionFactory.openSession();
-//	          tx = session.beginTransaction();
-//	          criteria = session.createCriteria(CountryORM.class);
-//	          criteria.add(Restrictions.eq("countryCode", "USA"));
-//	          results = criteria.list();
-//	          unitedStatesObj = (CountryORM)results.get(0);
-//	          results = null;
-//	          criteria = session.createCriteria(StateORM.class);
-//	          criteria.add(Restrictions.eq("countryId", unitedStatesObj.getId().longValue()));
-//	          criteria.add(Restrictions.eq("stateCode", stateCode));
-//	          results = criteria.list();
-//	          stateObj = (StateORM)results.get(0);
-//	          tx.commit();
-//	      }
-//	      catch (HibernateException e) 
-//	      {
-//	          if (tx!=null) tx.rollback();
-//	          e.printStackTrace();
-//	      }
-//	      finally 
-//	      {
-//	          session.close();
-//	      }
-//          return stateObj;  
-//    }
+	public static StateORM retrieveUsStateByCode(String stateCode)
+    {
+          SessionFactory sessionFactory = null;
+          Session session = null;
+          Criteria criteria = null;
+          Transaction tx = null;
+          List results = null;
+          CountryORM unitedStatesObj = null;
+          StateORM stateObj = null;
+          try
+	      {
+	          sessionFactory = getSessionFactory();
+	          session =  sessionFactory.openSession();
+	          tx = session.beginTransaction();
+	          criteria = session.createCriteria(CountryORM.class);
+	          criteria.add(Restrictions.eq("countryCode", "USA"));
+	          results = criteria.list();
+	          unitedStatesObj = (CountryORM)results.get(0);
+	          results = null;
+	          criteria = session.createCriteria(StateORM.class);
+	          criteria.add(Restrictions.eq("countryId", unitedStatesObj.getId().longValue()));
+	          criteria.add(Restrictions.eq("stateCode", stateCode));
+	          results = criteria.list();
+	          stateObj = (StateORM)results.get(0);
+	          tx.commit();
+	      }
+	      catch (HibernateException e) 
+	      {
+	          if (tx!=null) tx.rollback();
+	          e.printStackTrace();
+	      }
+	      finally 
+	      {
+	          session.close();
+	      }
+          return stateObj;  
+    }
 	
 	public static String getRandomStateCode()
 	{

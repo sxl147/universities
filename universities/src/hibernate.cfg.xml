@@ -27,7 +27,7 @@
   <mapping resource="ORMclasses/university/DepartmentORM.hbm.xml" />
   <mapping resource="ORMclasses/university/GradeTypeORM.hbm.xml" />
   <mapping resource="ORMclasses/university/CourseGradingORM.hbm.xml" />
-  <!-- <mapping resource="ORMclasses/university/BinaryFieldORM.hbm.xml" />  -->
+  <mapping resource="ORMclasses/university/BinaryFieldORM.hbm.xml" />
   <!-- <mapping resource="ORMclasses/university/GradeORM.hbm.xml" /> -->
  </session-factory>
  

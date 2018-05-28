@@ -2,6 +2,7 @@ package main;
 
 import java.util.List;
 
+import ORMclasses.university.AddressORMfactory;
 import ORMclasses.university.CityORM;
 import ORMclasses.university.CountryORM;
 import ORMclasses.university.DepartmentORM;
@@ -18,10 +19,31 @@ public class UniversityMain {
 	public static final String UNIV_CODE = "UNIV";
 	public static final String SUB_CODE = "Primary";
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		/*
+		 * this is our main method.
+		 * this program will generate a whole slew of information for a university database.
+		 * before running this program, you want to run the create_schema_universities.sql, located in the mysql folder
+		 * The program will generate records for:
+		 * all 50 states
+		 * a handful of cities for each state
+		 * two state universities for each state
+		 * a semester table
+		 * departments for each university
+		 * majors for each university
+		 * courses for each major for each university
+		 * generate 1 student for each university, and give them a random name and address, biased towards which
+		 * state university they are attending(90% chance in state address)
+		 * generate majors for each student
+		 * generate between 1 - 5 courses for each student, with the first 3 being courses in their major, and any
+		 * extra being outside of their major
+		 *  
+		 * then the program with generate an additional 10 students(wth majors and courses) for both UNC and NCSU
+		 * just so we have some additional data for our hive tables 
+		 */
 		
-//		AddressORMfactory.intializeStreetNames();
+		AddressORMfactory.intializeStreetNames();
 		/* main setup */
+		// our program currently only handles one country - USA
 		CountryORM country = UniversityDataGenerator.retrieveCountryByCode("USA");
 		
 		List<StateORM> states = UniversityDataGenerator.generateStates(country,OPER_ID);
@@ -58,7 +80,7 @@ public class UniversityMain {
 		 * initially make grade_types and course_grading records - not finished
 		 */
 	//	ArrayList<GradeTypeORM> gradeTypes = UniversityDataGenerator.initializeGradeTypes(OPER_ID);
-		System.out.println("here!");
+		System.out.println("Done!");
 	}
 
 }

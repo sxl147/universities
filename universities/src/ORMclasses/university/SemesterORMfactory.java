@@ -20,6 +20,7 @@ public class SemesterORMfactory
 	
 	public static void initializeLists()
 	{
+		years.add("2018");
 		years.add("2017");
 		years.add("2016");
 		years.add("2015");
